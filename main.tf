@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.storage_movers : {
       for k2, v2 in coalesce(v1.storage_mover_agents, {}) :
       "${k1}/${k2}" => merge(v2, {
-        storage_mover_id = module.storage_movers.storage_movers["${k1}"].id
+        storage_mover_id = module.storage_movers.storage_movers_id["${k1}"]
       })
     }
   ]...)
@@ -14,7 +14,7 @@ locals {
     for k1, v1 in var.storage_movers : {
       for k2, v2 in coalesce(v1.storage_mover_projects, {}) :
       "${k1}/${k2}" => merge(v2, {
-        storage_mover_id = module.storage_movers.storage_movers["${k1}"].id
+        storage_mover_id = module.storage_movers.storage_movers_id["${k1}"]
       })
     }
   ]...)
@@ -23,7 +23,7 @@ locals {
     for k1, v1 in var.storage_movers : {
       for k2, v2 in coalesce(v1.storage_mover_source_endpoints, {}) :
       "${k1}/${k2}" => merge(v2, {
-        storage_mover_id = module.storage_movers.storage_movers["${k1}"].id
+        storage_mover_id = module.storage_movers.storage_movers_id["${k1}"]
       })
     }
   ]...)
@@ -32,7 +32,7 @@ locals {
     for k1, v1 in var.storage_movers : {
       for k2, v2 in coalesce(v1.storage_mover_target_endpoints, {}) :
       "${k1}/${k2}" => merge(v2, {
-        storage_mover_id = module.storage_movers.storage_movers["${k1}"].id
+        storage_mover_id = module.storage_movers.storage_movers_id["${k1}"]
       })
     }
   ]...)
@@ -42,7 +42,7 @@ locals {
       for k2, v2 in coalesce(v1.storage_mover_projects, {}) : {
         for k3, v3 in coalesce(v2.storage_mover_job_definitions, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          storage_mover_project_id = module.storage_mover_projects.storage_mover_projects["${k1}/${k2}"].id
+          storage_mover_project_id = module.storage_mover_projects.storage_mover_projects_id["${k1}/${k2}"]
         })
       }
     ]...)
