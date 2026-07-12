@@ -1,4 +1,9 @@
 # --- azurerm_storage_mover ---
+output "storage_movers_id" {
+  description = "Map of id values across all storage_movers, keyed the same as var.storage_movers"
+  value       = module.storage_movers.storage_movers_id
+}
+
 output "storage_movers_description" {
   description = "Map of description values across all storage_movers, keyed the same as var.storage_movers"
   value       = module.storage_movers.storage_movers_description
@@ -25,6 +30,11 @@ output "storage_movers_tags" {
 }
 
 # --- azurerm_storage_mover_agent ---
+output "storage_mover_agents_id" {
+  description = "Map of id values across all storage_mover_agents, keyed the same as var.storage_mover_agents"
+  value       = module.storage_mover_agents.storage_mover_agents_id
+}
+
 output "storage_mover_agents_arc_virtual_machine_id" {
   description = "Map of arc_virtual_machine_id values across all storage_mover_agents, keyed the same as var.storage_mover_agents"
   value       = module.storage_mover_agents.storage_mover_agents_arc_virtual_machine_id
@@ -51,6 +61,11 @@ output "storage_mover_agents_storage_mover_id" {
 }
 
 # --- azurerm_storage_mover_project ---
+output "storage_mover_projects_id" {
+  description = "Map of id values across all storage_mover_projects, keyed the same as var.storage_mover_projects"
+  value       = module.storage_mover_projects.storage_mover_projects_id
+}
+
 output "storage_mover_projects_description" {
   description = "Map of description values across all storage_mover_projects, keyed the same as var.storage_mover_projects"
   value       = module.storage_mover_projects.storage_mover_projects_description
@@ -67,6 +82,11 @@ output "storage_mover_projects_storage_mover_id" {
 }
 
 # --- azurerm_storage_mover_source_endpoint ---
+output "storage_mover_source_endpoints_id" {
+  description = "Map of id values across all storage_mover_source_endpoints, keyed the same as var.storage_mover_source_endpoints"
+  value       = module.storage_mover_source_endpoints.storage_mover_source_endpoints_id
+}
+
 output "storage_mover_source_endpoints_description" {
   description = "Map of description values across all storage_mover_source_endpoints, keyed the same as var.storage_mover_source_endpoints"
   value       = module.storage_mover_source_endpoints.storage_mover_source_endpoints_description
@@ -98,6 +118,11 @@ output "storage_mover_source_endpoints_storage_mover_id" {
 }
 
 # --- azurerm_storage_mover_target_endpoint ---
+output "storage_mover_target_endpoints_id" {
+  description = "Map of id values across all storage_mover_target_endpoints, keyed the same as var.storage_mover_target_endpoints"
+  value       = module.storage_mover_target_endpoints.storage_mover_target_endpoints_id
+}
+
 output "storage_mover_target_endpoints_description" {
   description = "Map of description values across all storage_mover_target_endpoints, keyed the same as var.storage_mover_target_endpoints"
   value       = module.storage_mover_target_endpoints.storage_mover_target_endpoints_description
@@ -124,6 +149,11 @@ output "storage_mover_target_endpoints_storage_mover_id" {
 }
 
 # --- azurerm_storage_mover_job_definition ---
+output "storage_mover_job_definitions_id" {
+  description = "Map of id values across all storage_mover_job_definitions, keyed the same as var.storage_mover_job_definitions"
+  value       = module.storage_mover_job_definitions.storage_mover_job_definitions_id
+}
+
 output "storage_mover_job_definitions_agent_name" {
   description = "Map of agent_name values across all storage_mover_job_definitions, keyed the same as var.storage_mover_job_definitions"
   value       = module.storage_mover_job_definitions.storage_mover_job_definitions_agent_name
