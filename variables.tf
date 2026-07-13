@@ -79,7 +79,7 @@ EOT
       name        = string
       description = optional(string)
       export      = optional(string)
-      nfs_version = optional(string) # Default: "NFSauto"
+      nfs_version = optional(string)
     })))
     storage_mover_target_endpoints = optional(map(object({
       name                   = string
